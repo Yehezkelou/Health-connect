@@ -361,9 +361,10 @@ app/
 ├── package.json
 ├── tsconfig.json
 └── README.md
+```
+## 🤖 Backend Python(django.js)
 
-#Backend Python(django.js)
-
+```
 backend-django/
 ├── manage.py
 ├── requirements.txt
@@ -423,9 +424,11 @@ backend-django/
 └── docker/
     ├── Dockerfile
     └── docker-compose.dev.yml
+```
 
-#backend Node.js(Express)
+## backend Node.js(Express)
 
+```
 backend-node/
 ├── package.json
 ├── tsconfig.json
