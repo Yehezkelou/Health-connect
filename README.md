@@ -361,4 +361,133 @@ app/
 ├── package.json
 ├── tsconfig.json
 └── README.md
+
+#Backend Python(django.js)
+
+backend-django/
+├── manage.py
+├── requirements.txt
+├── .env
+├── .gitignore
+│
+├── airetech_ai/                     # Projet Django principal
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── wsgi.py
+│   └── asgi.py
+│
+├── apps/
+│   ├── iot/                         # Communication avec stations électroniques
+│   │   ├── __init__.py
+│   │   ├── models.py
+│   │   ├── views.py
+│   │   ├── signals.py
+│   │   ├── mqtt_handler.py
+│   │   └── urls.py
+│   │
+│   ├── preprocessing/               # Nettoyage & agrégation des données
+│   │   ├── __init__.py
+│   │   ├── pipeline.py
+│   │   ├── aggregators.py
+│   │   └── utils.py
+│   │
+│   ├── ai/                          # IA TensorFlow / PyTorch
+│   │   ├── __init__.py
+│   │   ├── models/
+│   │   │   ├── savedmodel/
+│   │   │   └── versioning.json
+│   │   ├── predictor.py
+│   │   ├── trainer.py
+│   │   ├── explainability.py
+│   │   └── urls.py
+│   │
+│   ├── api/                         # API Django REST pour l’IA
+│   │   ├── __init__.py
+│   │   ├── serializers.py
+│   │   ├── views.py
+│   │   ├── urls.py
+│   │   └── permissions.py
+│
+│   └── monitoring/                  # Logs, métriques, état des modèles
+│       ├── __init__.py
+│       ├── model_metrics.py
+│       ├── dashboards.py
+│       └── alerts.py
+│
+├── scripts/
+│   ├── run_mqtt_listener.py
+│   ├── retrain_model.py
+│   └── sync_stations.py
+│
+└── docker/
+    ├── Dockerfile
+    └── docker-compose.dev.yml
+
+#backend Node.js(Express)
+
+backend-node/
+├── package.json
+├── tsconfig.json
+├── nodemon.json
+├── .env
+├── .gitignore
+│
+├── src/
+│   ├── app.ts
+│   ├── server.ts
+│   │
+│   ├── config/
+│   │   ├── database.ts
+│   │   ├── env.ts
+│   │   └── logger.ts
+│   │
+│   ├── routes/
+│   │   ├── index.ts
+│   │   ├── auth.routes.ts
+│   │   ├── users.routes.ts
+│   │   ├── stations.routes.ts
+│   │   ├── predictions.routes.ts
+│   │   └── routing.routes.ts
+│   │
+│   ├── controllers/
+│   │   ├── auth.controller.ts
+│   │   ├── users.controller.ts
+│   │   ├── stations.controller.ts
+│   │   ├── predictions.controller.ts
+│   │   └── routing.controller.ts
+│   │
+│   ├── services/
+│   │   ├── auth.service.ts
+│   │   ├── user.service.ts
+│   │   ├── station.service.ts
+│   │   ├── prediction.service.ts
+│   │   └── routeplanner.service.ts
+│   │
+│   ├── models/
+│   │   ├── User.ts
+│   │   ├── Station.ts
+│   │   ├── Reading.ts
+│   │   └── Prediction.ts
+│   │
+│   ├── middleware/
+│   │   ├── auth.middleware.ts
+│   │   ├── error.middleware.ts
+│   │   └── validate.middleware.ts
+│   │
+│   ├── utils/
+│   │   ├── constants.ts
+│   │   ├── helpers.ts
+│   │   └── response.ts
+│   │
+│   └── tests/
+│       ├── auth.test.ts
+│       ├── users.test.ts
+│       └── stations.test.ts
+│
+└── docker/
+    ├── Dockerfile
+    └── docker-compose.dev.yml
+
+
 ```
