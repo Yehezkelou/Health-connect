@@ -1,0 +1,51 @@
+## faire les migration 
+1- npx prisma migrate dev --name init
+
+## deroulement 
+Parfait 😄, on va y aller comme si on parlait à un ami, avec des exemples concrets que tu peux visualiser facilement.
+
+Imagine que ton backend, c’est un restaurant 🍔. Chaque dossier a son rôle, et je te fais le parallèle.
+
+1. routes/ → le menu du restaurant 🍽️
+
+C’est là où tu décides quels plats sont disponibles et par quelle entrée les clients peuvent les commander.
+
+Chaque route correspond à un chemin URL.
+
+2. controllers/ → le serveur qui prend la commande 🍳
+
+Le contrôleur reçoit la demande du client (route), va chercher ce qu’il faut et renvoie le résultat.
+
+Il ne cuisine pas, il demande à la cuisine (services) de préparer.
+
+
+3. services/ → la cuisine 🍳
+
+C’est ici que la vraie préparation se passe.
+
+Accéder à la DB, calculer quelque chose, créer des règles…
+
+Les controllers demandent, les services préparent.
+
+
+4. middleware/ → le portier à l’entrée 🚪
+
+Vérifie si le client a le droit d’entrer, ou fait des actions avant de servir.
+
+Exemple : vérifier si le client est connecté avant de commander.
+
+Exemple concret :
+
+5. models/ → la recette 📖
+
+C’est la recette du plat, comment le plat doit être fait.
+
+Pour une base de données : structure des tables, types de données, etc.
+
+Exemple concret :
+
+6. utils/ → les outils de la cuisine 🔧
+
+Petits outils ou fonctions pratiques qu’on utilise partout.
+
+Ex : ouvrir une bouteille, couper un légume, générer un token JWT…
